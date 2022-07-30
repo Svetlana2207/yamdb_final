@@ -11,11 +11,9 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from .models import User
-from .permissions import (IsAdmin)
-from .serializers import (
-    NoStaffSerializer, SignUpSerializer,
-    TokenSerializer, UserSerializer
-)
+from .permissions import IsAdmin
+from .serializers import (NoStaffSerializer, SignUpSerializer, TokenSerializer,
+                          UserSerializer)
 
 
 class APIToken(APIView):

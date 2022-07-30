@@ -8,11 +8,10 @@ from rest_framework.response import Response
 from .filters import TitleFilter
 from .mixins import CreateDestroyViewSet
 from .models import Category, Genre, Review, Title
-from .permissions import (AuthorModerAdmOrRead, IsAdminOrReadOnly)
-from .serializers import (
-    CategorySerializer, CommentSerializer, GenreSerializer,
-    ReviewSerializer, TitlePostSerializer, TitleSerializer
-)
+from .permissions import AuthorModerAdmOrRead, IsAdminOrReadOnly
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReviewSerializer,
+                          TitlePostSerializer, TitleSerializer)
 
 
 class CategoryViewSet(CreateDestroyViewSet):
