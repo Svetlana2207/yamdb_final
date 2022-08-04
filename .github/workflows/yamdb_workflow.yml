@@ -17,8 +17,7 @@ jobs:
       run: | 
         python -m pip install --upgrade pip 
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
-        cd api_yamdb
-        pip install -r requirements.txt 
+        pip install -r api_yamdb/requirements.txt
 
     - name: Test with flake8 and django tests
       run: |
@@ -68,6 +67,9 @@ jobs:
           echo DB_HOST=${{ secrets.DB_HOST }} >> .env
           echo DB_PORT=${{ secrets.DB_PORT }} >> .env
           sudo docker-compose up -d 
+          # sudo docker pull sponomareva/yamdb_final:latest
+          # sudo docker stop $(sudo docker ps -a -q)
+          # sudo docker run --rm -d -p 8000:8000 sponomareva/yamdb_final:latest
 
   send_message:
     runs-on: ubuntu-latest
