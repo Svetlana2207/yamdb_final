@@ -67,9 +67,8 @@ jobs:
           echo DB_HOST=${{ secrets.DB_HOST }} >> .env
           echo DB_PORT=${{ secrets.DB_PORT }} >> .env
           sudo docker-compose up -d 
-          # sudo docker pull sponomareva/yamdb_final:latest
-          # sudo docker stop $(sudo docker ps -a -q)
-          # sudo docker run --rm -d -p 8000:8000 sponomareva/yamdb_final:latest
+          sudo docker-compose exec -T python3 manage.py migrate
+          sudo docker-compose exec -T python3 manage.py collectstatic --no-input
 
   send_message:
     runs-on: ubuntu-latest
