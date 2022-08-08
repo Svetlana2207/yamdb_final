@@ -38,7 +38,6 @@ docker-compose up -d --build
 docker-compose exec web python manage.py migrate --noinput
 docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input
-```  
 
 
 ### Деплой на удаленном сервере:
@@ -70,14 +69,13 @@ TELEGRAM_TOKEN # Токен телеграм-бота.
 
 После каждого пуша (git push) в главную ветку main:
 
-будут автоматически запускаться тесты: проверка кода на соответствие стандарту PEP8 (с помощью пакате flake8) и запуск pytest из репозитория yamdb_final;
+будут автоматически запускаться тесты: 
+проверка кода на соответствие стандарту PEP8 (с помощью пакате flake8) и запуск pytest из репозитория yamdb_final;
 сборка и доставка докер-образа на Docker Hub;
 автоматический деплой на боевой сервер;
 отправка сообщения в Telegram при успешном завершении деплоя.
 ``` 
 
 
-### Aвтор:
-
-[Svetlana2207](https://github.com/Svetlana2207)
+### Aвтор: [Svetlana2207](https://github.com/Svetlana2207)
 
