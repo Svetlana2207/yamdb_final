@@ -2,7 +2,7 @@
 
 ![yamdb_workflow.yml](https://github.com/Svetlana2207/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
-### Ссылка на проект: http://51.250.96.115/admin/
+#### Ссылка на проект: http://51.250.96.115/admin/
 
 #### Документация к API проекта Yatube: http://51.250.96.115/redoc/ 
  
@@ -18,6 +18,7 @@
 ### Как запустить проект в контейнере docker:
 
 Заполнить переменные окружения .env:
+
 - DB_ENGINE=
 - DB_NAME=
 - POSTGRES_USER=
@@ -25,7 +26,6 @@
 - DB_HOST=
 - DB_PORT=
 - SECRET_KEY=
-```
 
 Запустить docker-compose командой:
 
